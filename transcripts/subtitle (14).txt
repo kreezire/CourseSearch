@@ -1,0 +1,4 @@
+[MUSIC] Today, we're gonna talk about one of the
+most exciting things to be happening with machine learning over the last few years. It's a new area called deep learning. In particular, we're gonna talk about
+a particular use case of this area related to shopping for products just
+based on the image similarity. [MUSIC]

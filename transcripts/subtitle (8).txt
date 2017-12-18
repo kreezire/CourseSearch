@@ -1,0 +1,18 @@
+[MUSIC] So let's start with describing this
+task in a little bit more detail. Okay, so let's say we're sitting here,
+reading an article. Here we are, reading our article. And actually it's Carlos
+who's reading this article, because this is an article about soccer. Or as he would call it football if
+he was wearing his Argentina jersey or footsie ball if he was
+wearing his Brazil jersey and clearly, I'm not pronouncing
+either of those words correctly. Carlos can correct me later. But the point is that he likes
+this article and what we'd like to do is retrieve another article that
+he might be interested in reading. But a question is how do we do this? There are lots and lots of articles out
+there and I can't expect him to go and read each of them and say yes,
+he's interested or no, he's not. So we like to think of a way to
+automatically retrieve a document that might be of interest to him. By questions here are first, how to we
+measure similarity between articles? We need to have that in order to say that
+this article is similar to the one he's reading now and
+might also be of interest to him. Or that, here's a large set of
+articles that are very different and probably are not of interest to him. And then the second question is, how
+are we gonna search over the articles that exist out there and
+retrieve the next article to recommend. [MUSIC]

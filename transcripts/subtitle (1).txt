@@ -1,0 +1,19 @@
+So in this module we're
+gonna talk about regression. Which is one of the most widely
+used statistical tools outs there. And the idea is really simple. So we have some set of features and
+we wanna model how our observations that are associated with these features change
+as we change the values of the features. And we're gonna ground our
+conversation in a case study of trying to predict house values. So here we can imagine that a house has
+some set of features like what's the size of the house, how many bedrooms does
+it have, number of bathrooms and the list goes on and on. And the observation that we have is
+what's the value of the house or the house sales price. But the tools of regression go much beyond just thinking
+about doing prediction tasks. So as we're gonna see in
+the classification course, we can use regression tools for
+classification. So for example,
+let's say we have an email and we wanna classify whether it's spam or
+not spam. Well, that email we can think of having
+features about the text of the e-mail, that's indicative of whether
+that e-mail is spam or not spam. And in addition we can think
+about using regression for analyze the importance of
+the features themselves. And we're gonna talk more about
+that in the regression course. [MUSIC]

@@ -1,0 +1,48 @@
+Okay, so, let's talk about this problem
+of predicting the value of a house. So, this is a very important problem,
+at least in the United States. It's estimated that household wealth
+is nearly 50% invested in real estate. So, this is clearly important. Both to consumers, individuals,
+as well as policy makers. Okay, so I'm here and
+I wanna sell my house. I have this nice, big, lime green house,
+but I don't know how much to list it for. So I'm not sure what value my house has,
+and so how do I think about estimating
+the value of the house? Well, it might make sense
+that what I do is I look at other recent sales that have
+occurred in my neighborhood. So I look locally,
+at the region around me, and I say how much are the other houses sold
+for and what do those houses look like? So what I'm gonna do is
+I'm gonna record for each one of these recent sales
+what was the sales price? And also, what was the size
+of the house that was sold? I'm gonna say that that's what signifies
+whether that house is similar to mine or not. Okay, so being a statistician, I'm gonna
+take all these observations I had and I'm gonna make a plot of them. So in the US at least, the size of
+the house is measured by square feet. So that's gonna be my x axis. And then my y axis is gonna be
+the sales price of the house. Okay, so that's my y variable and each one of these points represents
+some individual house sale. So here this is one previous
+house sale in my neighborhood. And just to introduce a little bit
+of terminology here when we're talking about regression,
+people often refer to x, this variable x, as being the feature,
+that's the terminology we've been using. People also talk about it being
+the covariate or the predictor, and in some cases,
+it's called the independent variable. And then our observation
+y is as I've just said, I tend to refer to it as an observation. People also call it a response or
+the dependent variable. Okay, so the question is how am I gonna use these
+observations to estimate my house value? Well I might look at
+how big my house is and look for
+other sales of houses of that size. Well, most likely there
+are gonna be exactly zero house sales of other houses that had exactly
+the same square footage as my house. Okay, so
+I say well I can't use this approach. I'm gonna be a little
+bit more flexible and I'm gonna look at some neighborhood, not
+geographic neighborhood some little range of square footage around my
+actual square footage here. So I'm going to say okay let's look
+at all house sales that were for houses within this range
+of square footage. But even with that approach,
+in this case for example, I only have two house sales that
+I'm gonna base my estimate off of. So I don't really feel very
+comfortable with that. And what I'm actually doing here is I'm
+throwing out all these other observations as if they had nothing to do
+with the value of my house. And the question is, is that reasonable? Do we actually believe that
+there's actually no information in these other observations? Well, when I look at this data and when I
+think about data I like to leverage all the information that I can to
+come up with good predictions.

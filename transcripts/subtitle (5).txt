@@ -1,0 +1,61 @@
+[MUSIC] So, we now built a whole new kind
+of restaurant experience, or restaurant review experience,
+using classifiers. Let's dig in and really understand
+a little bit more what a classifier is, and some other applications
+of classification. So a classifier takes some input x, for
+example a sentence from the review or other inputs as we'll see. It pushes it through what's called
+a model to output some value y, that we're trying to predict. And here it's a class, for
+example, positive or negative. So positive in the case of sentiment
+analysis corresponds with thumbs up reviews, while negative
+corresponds with thumbs down. But this is just one
+example of classification. You can look at text, for
+example, a web page, I want to figure out which webpages interest me,
+and I can align them to categories. For example, is this about education,
+a page about education, is it a page about finance,
+is it a page about technology and so on? So, there's not just two categories. There can be three, four, or even thousands of categories
+I'm predicting from. Now, another example of classification, which really has impacted all of
+our lives, is in spam filtering. Some of you might remember, perhaps in the
+early 2000s, what spam filters were like. The quality was not very good. Really, they were all hand-tuned
+things where somebody said, oh it has certain words, it must be spam. But the spammers kept changing
+the words a little bit, adding numbers instead of letters,
+and beating the spam filters. And what really changed
+the world of spam filtering. It changed it so much that I don't even
+look at my spam folder, actually, sorry if your message went to my spam folder,
+I just don't open it, is machine learning. It's classifiers. They took the input x of the email and they fed it through a classifier that
+predicted whether it's spam or not. It did that really well. And it does it by not just looking
+at the text of the email, but it looks at other characteristics. So for example, who sent it. If it somebody's whose a close friend,
+or somebody you have lots of vacation, with it's less likely to be spam. The IP address is a person sending
+from the usual computer and so on. Lots of information. So this is another really
+interesting practical application. In computer vision,
+we do a lot of classification. We'll take an image, and
+figure out what is in that image. For example, here,
+the input x are the pixels of the image. We feed it to a classifier, and we're going to predict
+things like is this a dog? In fact it's a Labrador Retriever, Golden
+Retriever, or a different kind of dog. This is actually my dog,
+Labrador Retriever. And as we will see later on
+in the deep learning module, there's really interesting new ways of
+doing this with very high accuracy. Now you can also use classification
+in medical diagnosis systems, and in fact this is what your doctor does. They take your temperature, maybe they
+look at your x-ray, they look at some medical tests and they try to make
+a prediction about what's ailing somebody. Maybe they say nah, nah,
+you're just healthy, or you have a cold, you have the flu,
+maybe even you have pneumonia. That's a variable y
+that's being predicted, what is the disease that's going on. Now these days, there's really interesting
+new things around personalized medicine, because the prediction doesn't just
+depend on the standard measurements, but can be really personalized for me. Can depend on my particular DNA
+sequencing, which is pretty exciting and also my lifestyle,
+which maybe look something like or maybe more realistic,
+something like this. And so, given all these measurements, can make an even better
+prediction at what's ailing me. Now this idea of classification
+in off-machine learning, has really gone much further,
+even to be able to read your mind. So when I was at Carnegie-Mellon, Tom
+Mitchell, one of my friends and colleagues at his office next door, and he come to me
+and says, we've done this amazing thing. Which would take an image of your
+brain using a technology called FMRI, which is brain scan, and predict
+when you're reading a word of text, whether you're reading the word hammer or
+the word house. So it's really reading your mind. But in fact,
+he went on to do many interesting things. For example, if you're looking at
+a picture of a hammer or a house, but you train the classified on them you
+reading words hammers and house, you're still able to read your mind and
+figure out what picture you're looking at. So this is yet the next frontier of classification
+to understand how the brain works. [MUSIC]

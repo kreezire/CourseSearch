@@ -1,0 +1,117 @@
+[MUSIC] Great.
+We talked about an application of finding cool shoes or
+dresses just based on image features. The technique that we're gonna use
+today is called deep learning. And in particular it's based on
+something called neural networks. But before we get there,
+let's talk about data representation. We discussed things like TFIDF and bag of word models, but how do you really
+represent data when it comes to images? These are called features, and
+is a key part of machine learning. So typically, when you talk about machine
+learning, we're given some input. Let's say we're doing classification,
+we talked about sentimental analysis. You're giving a sentence,
+it goes through a classifier model and we decided that sentence has positive or
+negative sentiment. In image classification,
+the goal is to go from an image, this is my input, the pixels of
+the images, to a classification. In this case, this is my dog and
+I want to classify it as a Labrador retriever as opposed
+to other kinds of dogs. So as we discussed, features
+are the representation of our data that's use to feed into the classifier. There are many representations,
+so for example text, we talked about bag of words and TFIDF. With images there's a lot
+of other representations. And we'll discuss a few more
+of those in this module. But today we're really gonna
+focus on neural networks, which provide the non-linear
+representation for the data. Now,let's go back to classification. Let's do a little review. We discuss linear classifiers
+which create this line or linear decision boundary between say the
+positive class and and the negative class. And the boundary is stated by the score,
+w0 + w1 x the first feature,
+x1 x2 x the second feature and so on. On one side, on the positive side,
+the score is greater than zero and on the negative side
+the score is less than zero. So, if I have this nice score function, I can separate the positives
+from the negatives. In neural networks we're going to
+represent such classifiers using graphs. And so, here we have a node for
+each feature x1, x2, all the way to the dth feature, xd, and a node for the
+output y, which we are trying to predict. So, the first feature x1 is
+multiplied by the weight w1, so I'm putting that weight on the edge. X2 is multiplied the second weight,
+w2 I'm gonna put it on that edge, all the way to xd, which is multiplied
+the weight wd, to put in the last edge. And the last weight, w0 doesn't get
+multiplied by any feature, but it gets multiplied by the number one, so we put
+a little one at the top multiplying w0. And so, if you imagine multiplying
+the weights, w0 through wd with the features x1 through xd and
+the coefficient one, you get the score. And when the score is greater than zero,
+we declared the output to be one and when it scores less than zero,
+we declare the output to be zero. This is an example of a small,
+one layer, neural network. So, we describe the small linear
+classifiers as a neural network, as a one layer neural network. What can this one layer
+neural network represent? Let's take the function x1 or x2. Can we represent that using
+a small neural network like this? Well, let's define the function
+a little bit more formally. So, what we have is variables x1, x2, and the output y. And there's some possibilities. X1 can be zero, x2 can be zero,
+and since it's x1 or x2, the output y would be zero in this case. When x1 is one, and
+x2 is zero, the output is one. When x is zero, when x2 is one,
+the output is one, and similarly, when they're both one,
+the output is 1. So, we want to define the score
+function such that the value is greater than zero for the last three rows, but
+it is less than zero for the first row. How do we do that? So for example, there are many
+ways of doing it actually, but if I put a weight of one. When each one of the edges x1 and x2,
+and we think about the score, the score of the first row is zero and the score
+of the other rows are greater than zero. So, we wanna add a little
+bit of separation, so we might put a negative
+value on the first edge. Let's say -0.5 and so
+let's see what happens to the score. When x1 is zero and x2 is zero,
+then the score becomes -0.5 and yey I have something less than zero and
+my score is correct, my output is correct. When x1 is one and x2 is zero,
+I get the score of 0.5. Similarly, when x1 is zero and x2 is one. And finally when they're both one,
+I get a score of 1.5. So, with this simple weights on the edges,
+I represent the function x1 or x2. Now, can we represent the function x1 and
+x2? Well, similarly we can put weights one and
+one on the edges x1 and x2 but in this case, we only want to turn
+it on when both x1 and x2 have value one. So, instead of putting -0.5 on
+that top edge, we put -1.5. And, if you fill out the table just
+like we did with the first example, you'll notice that we now
+represented the function X1 and X2 using a simple neural network. So, a one layer neural network is
+basically the same as the standard linear classifiers we've been
+learning about in this course so far. So what can linear
+classifiers not represent, we said it can represent x1 or x2. It can represent x1 and
+x2 but what's a function, a very simple function
+it cannot represent? Well, here's an example. There is no line that separates
+the plusses and minus in this example. This function's called the XOR. I like to call it the counter
+example to everything. So, whenever you're trying
+to find the counter example, the first thing to try is XOR. Now, for this case, the linear features
+we described are not enough and we need some kind of non-linear features,
+and this is when you're networks come to play for
+reals and we'll see an example of that. So let's review what XOR is. So, XOR has value one when
+either X1 is true and x2 is false so not x2 or not x1, so x1 is false or zero and x2 has value 1. So, how can we represent
+this with a neural network? Well, let's call this first term z1 and
+the second term z2. What we're gonna do is build
+a neural network to represent not directly the inputs x1 and
+x2 to predict y, but don't predicts intermediate values z1 and
+z2, and then those are going to predict y. So let's take z1. How do we represent a neural network,
+only a neural network that can predict z1. We discussed that a little bit,
+but here goes. It's a little bit different
+than the end case from before. Since, we have to negate, we say not x2,
+we put a minus 1 on that edge and we put a plus 1 on x1 and
+a minus 0.5 in there. We now have our representation for z1. Similarly for z2,
+we put a minus sign on the edge x1, this edge here, x1 to z2,
+we put a plus one on the edge x2 to z2 and then -0.5 on the constant edge,
+and now it represents z2. And the last step, if Z1 is it to exist,
+all we have to do is or them. And we already know how to or
+to bullien variables. It's just one, 1- 0.5. And this is an amazing time for us. We've now built out first
+deep neural network, not super deep, has two layers but
+is a little exciting. We just built our first neural network. It was a two layer neural network,
+but in general neural networks about, there's layers and
+layers of transformations of your data. And we use these transformations to
+create these non linear features, and we'll see some examples of
+that in computer vision. Now, neural networks have been around for about 50 years, about as long as
+machine learning's been around. However, they fell is disfavor
+around the 90's because folks are having a hard time getting
+good accuracy in neural networks. But everything changed
+about ten years ago, because of two things that came about. First, it was a lot more data and because
+neural networks have so many, many, many more layers. So, many layers you need a lot of data
+to be able to train all those layers. They have a lot of parameters. We'll see a really exciting neural
+network of 60 million parameters. So, we need a lot of data to train them. So, we recently have come about lots and
+lots and lots of data from a variety of sources,
+especially the web. Now, the second really great change
+that made deep neural networks possible is advances in computing resources. Because we have to deal with bigger
+neural networks and more data, we need fast computers and
+GPUs which were originally designed for accelerating graphics for computer games. Turned out to be exactly
+the right tool to build and use neural networks with lots of data. So because of GPUs and because of these deep neural networks,
+everything's changed. And now we've had a lot of
+impact in the real world. [MUSIC]

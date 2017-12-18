@@ -1,0 +1,46 @@
+[MUSIC] There are many ways to shop for
+products today. Typically though, you have to use
+what's called keyword search. You type a query on a search engine and try to find products that
+are interesting to you. But let's look at new ways to shop. So for example, let's say I want to
+buy a shoe, or buy a pair of shoes. Now some people just really care about
+shoes, I really care about shoes. I have, let's say,
+this cool black pair of shoes. It's got some real style to it. I have this other black pair of shoes. It might look to you as most the same, but they're totally different,
+totally different styles. I have this crazy dress shoe. They might look transparent to you, but
+it's actually a really cool shade of blue. I have this crazy,
+two-colored sneakers, which I love. I also have this other really
+interesting pair of sneakers, which I bought in Hong Kong,
+and they're kind of fun. And everybody knows I like purple,
+so I even have this purple boots. >> Forget it, you have a lot of shoes. >> I have a lot of shoes,
+but I need more shoes. And so, there's a lot of shoes online. And it's really hard to find the ones
+that are interesting, stylish, different, kind of like my style. And if I use keyword search,
+it doesn't really help me. If I have to type the dress shoes,
+I just find a bunch of boring usual shoes. Although the ones on
+the top left-hand corner, they're kind of interesting and stylish. But still,
+I want to find something different, and I don't know what keywords to type or
+how to search for it. So, what should I do? Let me start by showing you a cool
+demo of a new way to shop based on similarity search. Let's talk about something even
+more complicated than buying shoes. My sister is a fashion designer and
+her birthday's coming up. And I want to buy her
+a really interesting, cool gift that she might love. Well maybe I wanna buy her a dress. So if I just use textual keyword
+search and I try to look for a dress,
+I'm gonna find a bunch of dresses. But I really don't know how to
+choose a dress that she'll like just based on these properties here. And I don't know how to describe it. How do you describe the dress
+my sister might like? Now, I could say maybe
+she loves floral dresses. Even if I say floral dresses, I'm still
+presented with a number of options in different kinds of floral dresses,
+and her style is pretty unique. So how am I gonna find a dress that really
+looks like something she will love? So if I scroll down this list, maybe
+I'll see something that catches my eye. Oh here's a floral dress that looks
+pretty good, so I'm gonna click on that. And instead of just finding
+dresses based on keyword search, I wanna use image similarity
+to find similar dresses. So this are dresses that look similar to
+this one, just based on image qualities. And you see that now we get dresses
+that do have similar properties. And now, this is much easier to to kind
+of find something that she might like. But of course, many of these
+dresses are a little too usual. And she might want something
+a little bit more interesting. So for example,
+here's one which has multiple patterns. And now we find dresses that are similar. And you see they have multiple
+styles within a dress. How will I know how to describe that? So let me search within the set. And say, oh, you know what,
+this one looks pretty good. And if I click on that, you see other
+visually similar dresses to this one, but this one looks particularly good. And the more I looks a little bit like
+my sister too, so perfect gift for her. [MUSIC]

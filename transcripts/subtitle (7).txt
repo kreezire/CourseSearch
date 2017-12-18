@@ -1,0 +1,8 @@
+[MUSIC] Okay, so in this module, we're gonna
+talk about clustering and similarity. And the point here is the fact that
+often we have lots of observations, and we want to infer some kind of structure
+underlying these observations. And in this case,
+the structure we're gonna talk about is groups of related observations or
+clusters. And as with all of our modules, we're gonna motivate everything with
+a real world application, a case study. In this case we're gonna talk about a task
+of retrieving documents of interest. [MUSIC]

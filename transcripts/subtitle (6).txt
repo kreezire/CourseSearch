@@ -1,0 +1,60 @@
+[MUSIC] One of the most common types
+of classifiers is a so called linear classifier. So let's talk a little bit about that. The question here is how do
+we represent the classifier? So we start with some sentences, for
+example in a sentiment the mouse's case, the classifier. You get a prediction whether it is a
+positive sentence or a negative sentence. So, how does this classifier work? In the sentimental analysis
+you can imagine a simple kind of threshold classifier. Suppose that I take a sentence and
+somebody tells me these are all of the positive words,
+great, awesome, good amazing and so on. Here's a bunch of negative words. Bad, terrible, disgusting,
+food, and so on. And so
+what I can do is take the sentence and count how many positive words
+there are in a sentence and how many negative words are in
+the sentence, just count those. And then say if the number
+of positive words is higher than the number of negative words. Then we have a positive sentence but if they use more negative more words
+then you have a negative sentence. So for example, if the input sentence that
+we have is the sushi was great positive one, the food was awesome positive two,
+but the service was terrible negative one. You have two positives one negative and in the end was the positive wins and
+so you have a positive prediction. Now threshold classifiers
+have some limitations. Where does this list of positive and
+negative words actually come from? It has to magically
+come from somewhere and not just that, words have different
+degrees of positive and negativeness. So great is more positive than good. You wanna tune and figure out
+what's better great, good, amazing, is amazing better than great? Who knows? So how do we figure that out,
+how do we weigh different words? And single words might not be
+enough to make good classification. So good food, so
+the food was good is positive. The food was not good
+is actually negative. And so these are all issues
+that need to be addressed. The first two areas where the positive and
+negative words come from and how do you weigh them comes
+from learning a classifier and we're going to talk about next. The issue of good versus not good is addressed by using more complicated
+features than single words. And we're gonna talk about it
+towards the end of the module. So a linear classifier,
+instead of having a list of positive and negative words, actually takes all
+the words and adds weights to them. So, for example, good might have a weight
+of 1, great might have a weight of 1.5, awesome might have really
+big weight of 2.7. While bad might have a weight of -1,
+terrible may have a weight of -2.1, awful might be -3.3 cuz
+awful is really just awful. And this ways that really
+don't matter to sentiment. So things like the, we, where, restaurant,
+they appear both in positive and negative sentences so
+they get weight zero. Suppose somebody magically told you
+what the weight of each word were. We're going to talk about it in
+a little bit how those get learned by the classifier. But given those weight, how to figure out
+if the sentence is positive or negative. Here we use the idea of scoring. So for example take this sentence. The sushi was great, the food was awesome,
+but the service was terrible. Let's score that sentence. So we're gonna compute this,
+the score of the input sentence x. So in this case, you get from great,
+you get positive 1.2. From awesome, you get another 1.7 but from table, you get minus 2.1 right here, and so the grand total here is
+2.9 minus 2.1, which is 0.8. And the key here is that since the score
+of the sentence is greater than zero, we're going to predict that
+it is a positive sentence. If the score was the opposite,
+if the score of x were less than zero, then we'd have predicted
+it's a negative sentence. So this is how a linear classifier works, if you know the weight of each word,
+and this is called a linear classifier because the output is
+basically the weighted sum of the input. Just weight, what features appears,
+what words appear in the input. So we're working for simple linear
+classifier to start out with. So in summary, given a sentence and
+given the weights for the sentence,
+what we do is compute the score, which is the weighted count of
+the words that appear in the sentence. And then we say if the score
+is greater than zero, we predict y-hat to be positive. While if the score is less than zero,
+we predict it to be negative. And that is a linear classifier. [MUSIC]

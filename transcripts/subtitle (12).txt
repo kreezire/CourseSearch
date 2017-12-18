@@ -1,0 +1,86 @@
+[MUSIC] Let's start by discussing some areas in
+which recommender systems are playing a really active role behind the scenes. And as we're gonna see in this discussion,
+depending on the specific application different aspects of the objective we're
+trying to optimize are gonna be important. But before we start talking
+about recommenders systems, it's really important to talk
+about the idea of personalization, because personalization is transforming
+our experience of the world. As we talked about in the clustering and
+similarity module, there are lots and lots of articles out there. In lots and lots of webpages. And we can't possibly be
+expected to browse all of them. So another example here is YouTube. So YouTube, it's quoted that there are roughly 100
+hours of video recorded per minute. And the question is what do I care about. You know, I go on YouTube and I wanna
+watch some video that's of interest to me. So this is an example, clearly,
+of information overload. There's just way too much content there
+for me possibly to be able to go and for me to find what I'm interested in without
+somebody helping that content come to me. So browsing, the traditional
+form of browsing, is history. There needs to be some way in which the content that's relevant to
+me is automatically discovered. And so this the notion of personalization,
+where we wanna connect users like myself, who goes to YouTube and
+items which, in this case, are gonna be videos on YouTube
+need to somehow be connected. Okay, so, personalization is gonna play a key role
+in this notion of recommender systems and now let's talk about some examples where
+recommender systems are very important. So one very classic example that we
+mentioned a little bit earlier was this idea of Netflix where,
+here people go and they watch videos. And Netflix has this goal of trying to
+make suggestions of which movies or TV shows might be of interest
+the person who's come to this site. And the question is, how are we gonna
+go about doing these recommendations. Another example, again going back to
+something we talked about earlier, is Amazon making product recommendations. So you go on to Amazon, you purchase some
+product, and you'll see on the site that it makes a recommendation of other
+products you might be interested in. But one important thing to
+incorporate in these recommendations is the fact that not only do
+you have to take into account the interest that the person
+had in this one session. So for example here we're showing that
+somebody bought a book about websites and might be interested in another
+book about web applications or for example my most recent purchase on
+Amazon were shoes for my son but the interest that I have in making that
+purchase of shoes isn't my only interest. I'm not only looking for
+shoes for a one-year old. There are lots of other reasons why
+I go to Amazon and make purchases. And if you look at my history of purchases
+you're gonna be able to make much better recommendations for
+me than just based on a single session. And likewise,
+recommendations might change over time. So there's interest in making
+recommendations, for example, what I might be interested
+in purchasing today. So if you look at my
+purchase history a year ago, I was buying a lot of newborn products. So newborn baby products. But that's probably not something that
+I'm very likely to purchase today. So the recommendations that
+Amazon presents to me today have to adapt with time. So just as on demand video with
+personalized recommendation has really revolutionized how people watch movies and
+TV shows, likewise there are a lot of websites that provide streaming
+audio with personal recommendations. However, in this case unlike
+thinking about on demand video here we want one song
+to play after another. And what we want is we want
+some coherent stream of songs. So songs I've liked I
+wanna play similar songs. I don't wanna rapidly switch between for
+example some cafe Indi songs, all of a sudden playing
+a heavy metal song. But at the same time I don't want a song I just heard
+to play again and again and again. So I want some sense of
+recommendations that are coherent but I also want them to provide a diverse
+sequence of songs for me to listen to. Okay, well another critical area
+where recommender systems have played a very active role
+is in social networking. So for example on Facebook there
+are tons and tons of users. And we wanna form connections
+between these users. So for example here might be a graph of
+connections between users on Facebook and maybe I'm this pink node right here, and Facebook wants to recommend other people
+I might be interested in connecting with. In this application and it's important
+to note that both the users and the quote unquote items
+are of the same type. We're both people. So when I'm a user on Facebook the things
+that are being recommended to me, the items, they are other people. So we're gonna end up with users and items being exactly the same
+type in this application. But the recommendation system that we've
+talked about have really focused on online media. But more and more, people are realizing
+other area's in which recomender systems can play a really important role. And just as one example, we can think about what is
+call drug-target interactions. And here, maybe we have some drug
+that's been studied, for example, let's talk about aspirin. It's been well studied as a treatment for
+headaches. But what if it's discovered to
+have some other possible use? So for example, for blood thinning,
+for heart patients? If we can find these
+types of relationships, if we can repurpose this drug for
+some other treatment, then that could be really useful,
+because it's really quite costly and lengthy process to get FDA approval for
+a completely new drug, but if we can take a drug where
+the types of side effects and the possible risks associated
+are already well known and well studied. Then it's a lot easier to get approval for
+treatment with some other condition, so this is a case where we might say,
+if you like Aspirin for headaches, you might also like Aspirin for
+your heart condition. So recommender systems are playing an
+active role in medicine as just an example of the diversity of applications
+where we see these types of systems. >> [MUSIC]

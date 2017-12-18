@@ -1,0 +1,54 @@
+[MUSIC] Okay. Well instead of the analysis
+that we just did, we can instead think about
+modeling the relationship between the square footage of
+the house and the house sales price. And to do this, we're gonna use something
+that's called linear regression. Okay, so to leverage all the observations
+that we've collected, what we wanna do is be able to understand the relationship
+between the square foot of the house and the house sales price. And so
+the simplest model we can use for this, is just fitting a line through the data. So here's an example of
+a line fit to this data. And this line is defined by
+an intercept W0 and a slope W1. And so often we'll talk about W1
+being the weight on the feature X or its called the regression coefficient. And what this weight has
+an interpretation of, is as we vary X,
+the square footage of the house, how much of an impact does that have on
+changes in the observed house sales price? Okay, so these two things,
+our intercept and our slope are the parameters of our model. And so, to be very explicit here,
+we're gonna write this function, this linear function here,
+with the subscript W, that indicates that this function
+is specified by parameters. W being the set of W0 and W1. Okay, so this is the line
+that we fit through the data. But a question is, which line is
+the right line or a good line to use for a given data set. So maybe we could draw this line or
+this one instead. And each one of those is given by
+a different set of parameters w. And a question is which w do we
+want to choose for our model? Okay, well, to think about this,
+let's talk about defining a cost for a given line. And one very common cost
+associated with a specific fit to the data is something called
+the residual sum of squares. So, the residual sum of squares,
+we take our fitted line and we look at each of our observations. And we look at how far is that observation from what the model would predict. Which is just the point on the line. So we look at all of these distances here,
+and we actually look at the square
+of these distances. That's why it's called the residual. The residual is the difference of your
+prediction and your actual observation. We're gonna look at the square and
+we're going to sum over them. Okay, so this is the equation, here more
+explicitly, where we have the price, this is our observed house sales price for
+the first house. And what is this term here? So, if this is what I'm
+calling dollar house one, then what this point here is, is if this is square footage of house one. Then this x that I've drawn here represents exactly this term here. This is that value, the point on the line. So this dollar sign
+minus this term here is the difference between our observed
+house price versus what our model, just this line, predicts for
+this given house square foot. And we're squaring that and we're summing over all the different
+houses in our data set. Okay, so we think about trying to find the
+best line according to this metric that I've defined here,
+this residual sum of squares, what we do is we research over
+all possible W 0 and W 1. So all possible lines, and we choose the one that minimizes
+the residual sum of squares. So we're gonna denote
+the resulting W as W hat. So remember that's gonna be the set
+of w hat zero, and w hat one. Our intercept and our slope. Okay. So there exists really nice and
+efficient algorithms for computing this w hat,
+this search over all possible ws. We could look at parameters of this model. But we're gonna discuss these algorithms
+more in the regression course. Ok, so now let's talk about how to take
+our estimated model parameters and use them to predict the value of my house. So I've gone through, sorry,
+this star shouldn't be there. This should be a hat, just to be clear. And I've gone through and plotted the line associated with our estimated w0 hat and
+w1 hat. And now, here's my house. This is its square footage. And the best guess of my house price,
+is simply what the line predicts. So I go, and I compute what is the value
+for this square footage of my house. Which is W0 hat plus W1 hat
+times the square footage of my house okay very,
+very straightforward. [MUSIC]

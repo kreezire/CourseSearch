@@ -1,0 +1,20 @@
+[MUSIC] Okay, so in this module we're gonna
+talk about recommender systems. And one prototypical example of where
+recommender systems are really useful is in recommending products. So imagine you have a large set of
+products and there are some users, and you wanna recommend a subset of
+your products to those users. Well the question is,
+how are we gonna do this? And what we're going to talk about is how
+to use machine learning techniques in order to use the past history of your
+own purchases, as well as the purchases of other people, to determine which
+products to recommend to you. And recommender systems just have a
+really, really wide range of applications and they've exploded in
+popularity over the last decade. But Amazon was an early pioneer in this
+area, focused on an application we're gonna be talking about,
+which is product recommendation. But another example that really
+popularized recommender systems was a competition that Netflix ran
+starting back in 2006, ending in 2009, where there was a $1 million prize for
+the person who provided the best recommender system for
+recommending movies to users. And we'll talk a little bit about
+that application in this module. But it really spurred a lot
+of activity in this area, developing new recommender systems and
+a lot of research following that. [MUSIC]

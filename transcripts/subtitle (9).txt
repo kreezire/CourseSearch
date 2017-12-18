@@ -1,0 +1,82 @@
+[MUSIC] So the first thing we need to describe is
+how are we gonna represent the documents that we're looking at. Okay, so perhaps the most popular model to
+represent a document is something called the bag of words model, where we simply ignore the order of
+words that are present in the document. And the reason it's called a bag of
+words model is we think of taking a bag, throwing all the words from that document
+into the bag, shaking it up, and the new document we've created
+with the words all jumbled up has exactly the same
+representation as I'll describe as the original document
+where the words were ordered. And what we're gonna do,
+instead of considering the structure, the order of the words, is we're simply gonna count the number of
+instances of every word in the document. So let's look at a specific
+example of this. So in this document we're gonna imagine
+that there's just one sentence, and that sentence says that Carlos calls the sport
+futbol, Emily calls the sport soccer. Actually I guess that's really two
+sentences, but that's the entire document. And what we're gonna do to
+count the number of instances of words in this very short document
+is we're just gonna look at a vector. And this vector is defined
+over the vocabulary in whatever language we're looking at. So maybe one word in our
+vocabulary is the name, Carlos. Another place in this vector is
+the index for the word sport. And then, somewhere else we have the word
+futbol luckily in our English vocabulary that I'm writing here and then let's say,
+Emily is this last entry. What words are we missing? We're missing the word calls,
+and of course the word the. Okay, so how many instances of Carlos? Well, there's only one. How many instances of the? We have two of the. Two of calls, two of sports, one of futbol and
+I forgot the word soccer. One word of Emily and
+let just throw soccer in here, imagining this was the index and
+this would be our word count factor with. For this document,
+every other entry would be zero. And all these other entries represent all
+the other words that are out there in the vocabulary, like the word cat, and dog, and tree, and
+every other word you can think of. So it's a very, very long and sparse vector that counts the number
+of words that we see in this document. Okay, so we talked about this
+representation of our documents in terms of just these raw word counts. This bag of words model. And now we want to talk about how we're
+gonna measure the similarity between different documents because we're
+gonna use that in order to find documents that are related to one another
+and so on, like we talked about before. Carlos is reading an article, so what’s
+another article he might be interested in? Okay, so imagine that this is
+the count factor that we have for this article on soccer, with this
+famous Argentinian player, Messi. And then there's another article
+here that I'm showing in blue and the associated word counts. And this article is about another
+famous soccer player, Pele. Is that right? >> Pele.
+>> Pele. [LAUGH] So
+when we think about measuring similarity, what we can do is simply look at
+an element-wise product over this vector. So for every element in the vector,
+we're gonna multiply the two elements appearing
+in these two different count vectors. And add up over all the different
+elements in this vector. So here I've done this math
+where we have 1 times 3, all the other elements multiplied to 0, except at some point that fifth entry
+in the vector we have 5 times 2. And if we do this multiplication
+over the whole vector, the sum of these terms is 13. So that measures the similarity
+between these two articles on soccer. But now let's compare to another article, which happens to be something
+about a conflict in Africa. And so I'm providing the examples of
+word counts that appear in this article. And what we see, is when we go to measure
+the similarities between these articles, using the method that I described
+of element-wise product, and then adding, that the similarity
+here in this case is 0. Okay, so let's talk about
+an issue that arises when we use these raw word counts to measure
+the similarity between documents. So to do this, let's look at these green
+and blue articles that we had before. And so I'm repeating the word
+count vectors that we had, and what we calculated before was the fact
+that the similarity between these two articles that are both about soccer is 13. Okay, but now let's look at what happens if we
+simply double the length of the documents. So now every word that appeared in that
+original document appears twice in this twice as long document. So, the word count vector is simply two
+times the word count vector we had before. So, when we go to calculate
+the similarity here, what we see is now the similarity
+is calculated to be 52. So, let's think about this. What we're saying is
+that two documents that are related to each other
+in the same way as before. They're both talking about
+the same two sports, but one just is replicated twice
+is a lot more similar. We would say, yes, Carlos is a lot more
+interested in this longer document. Then what happened when Carlos was
+reading the shorter documents. So this doesn't make a lot of sense when
+we're trying to do document retrieval. And it biases very strongly
+towards long documents. So let's think about how
+we can cope with this. So one solution is very straight forward where we're
+simply gonna normalize this vector. So we take this word count vector and we're gonna compute
+the norm of the vector. And so if you guys remember
+computing the norm of a vector, we simply add the square of every entry in
+the vector, and then take the square root. So, in this case, we have the square root of 1 squared plus
+5 squared plus 3 squared plus 1 squared. And that happens to be the number and so, the resulting normalize word count vector
+is shown on the bottom of the slide here. And what this does is, it allows us to
+place all of our articles that we're considering, regardless of their length,
+on equal footing. And then use this normalized
+vector when we go to do retrieval. [MUSIC]

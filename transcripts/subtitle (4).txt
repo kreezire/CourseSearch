@@ -1,0 +1,53 @@
+[MUSIC] There are many systems for
+restaurant reviews out there but today we're gonna talk about a pretty
+new and exciting one that we can build. So it's an important day for us and we're trying to book
+a Japanese restaurant, and we love Japanese food and want a really
+cool place to have some Japanese food. But this is Seattle that we live in,
+and Seattle is really awesome for Japanese food, so there are many,
+many places for sushi, and in fact, there are many that have really
+good ratings, say four stars. So perhaps when I'm thinking
+about a restaurant to go to I'm not just thinking about the overall
+stars of the restaurant, but I'm thinking about how is it in terms
+of the food, in terms of the ambiance? In particular how is it
+in terms of the sushi, which is the thing that
+I really care about. I really love sushi and I want really,
+really the best, freshest fish, and the most awesome,
+innovative sushi I can get. So when you talk about a positive review
+for a restaurant, and here's a restaurant that we love in Seattle, a sample
+review might go something like this. So watching the chefs
+create an incredible, edible piece of art,
+was really a unique experience. So the experience is really positive if we
+think about that aspect of the restaurant. But a review might want to say,
+well, my wife tried the ramen, and it was pretty forgettable. That means the ramen, not so good. Now, the review continues and says, all the sushi was delicious,
+easily the best sushi in Seattle. So the sushi was really two thumbs up. Now, I don't care about the ramen. I'm not going to this place for ramen. I don't care that this person
+really didn't like the ramen, or his wife really didn't like the ramen. What I really care about is good
+experience and amazing sushi. So this review is just for me. So when I'm thinking
+about restaurant reviews, I wanna understand the aspects of
+the restaurant, their positive or negative, and really think about which
+ones of those really affect my interests. So if I look at all the restaurant
+reviews, I want to feed them to this new, really exciting, new type of restaurant
+recommendation system that's gonna tell me the experience was good, four stars. The ramen was a so-so, but who cares? But the sushi, the thing that I really
+care about, that was five stars, and not just that, it's gonna give me
+some interesting feedback, so for example, this is easily
+the best sushi in Seattle. Now that's where I wanna go. So how do we build such an intelligent
+restaurant review system? Well we're going to start
+with all the reviews and we're going to break
+them up into sentences. So each review is composed
+of multiple sentences and some sentences cover different
+aspects of the restaurant. So for example, a sentence that says
+easily the best sushi in Seattle, I wanna feed that sentence
+through a sentiment classifier. So sentiment classifier is gonna
+say is this sentence positive, or is it a negative sentence? Now we have a sentiment classifier,
+which can take a sentence and say is it positive or negative? So how do we build this new kind of
+cool restaurant review experience? So we're gonna take all the reviews and break them into sentences
+that will be discussed but then we're gonna select the sentences
+that talk about the aspect I care about. So which ones of these
+are really about sushi? So not all of them, but a subset of those. Then I feed those sentences
+through the sentiment classifier, each one of them, and
+then I average the results. In this case all of
+the sentences were positive and so I'm gonna say this is a five star
+restaurant review in terms of the sushi. Not just that, I can look at
+the sentences about sushi and look at which ones are most positive. So for example, this one must be
+the positive, but easily the best restaurant in Seattle maybe is the most
+positive, and I can display those. I can also display the most negative ones. In this case, there's nothing
+negative to say about the sushi. [MUSIC]

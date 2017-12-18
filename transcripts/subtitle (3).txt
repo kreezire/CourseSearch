@@ -1,0 +1,10 @@
+[MUSIC] Today we're gonna talk
+about classification. Which is perhaps one of the most
+common areas of machine learning, one of the most used, and
+useful areas of machine learning. And perhaps,
+one of those most intuitive ones as well. So things like figuring out
+whether your email's spam or not, or whether a document
+comes from a sports topic, or it's about politics, or
+it's about entertainment, and so on. But as usual,
+we're going to start with a use case, which is an exciting one,
+around restaurant reviews. [MUSIC]
