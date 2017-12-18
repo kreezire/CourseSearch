@@ -6,13 +6,28 @@
 import nltk
 import graphlab
 import os
+import sys
 
 
 # In[ ]:
+#parseCommandLineArguments: parse arguments passed to the program
+#returns -1 if it fails
 
+def readCommandLineArgs(argv):
+	opts = {}  # Empty dictionary to store key-value pairs.
+	hasArgs = False
+	while argv:  # While there are arguments left to parse...
+		if argv[0][0] == '-':  # Found a "-name value" pair.
+			hasArgs = True
+			opts[argv[0]] = argv[1]  # Add key and value to the dictionary.
+		argv = argv[1:]  # Reduce the argument list by copying it starting from index 1.
+	if hasArgs == False:
+		return -1
+	return opts
 
-
-
+def printHelp():
+	print "Usage: python search.py -d [folderPath]"
+	sys.exit(0)
 # In[2]:
 
 # readFiles reads files from the specified path.
@@ -46,12 +61,26 @@ def computerTfIdf(filesDataSFrame, textField):
 # In[5]:
 
 ### Main task
-transcripts = "transcripts"
-filesDataSFrame=readFiles("transcripts")
-if(not len(filesDataSFrame)):
-    print "Error in reading transcripts"
-filesDataSFrame = computerTfIdf(filesDataSFrame, "Text")
-
+if __name__ == '__main__':
+	from sys import argv
+	transcripts = ""
+	myargs = readCommandLineArgs(argv)
+	if myargs == -1:
+		printHelp()
+	if '-d' in myargs:  
+		transcripts = myargs['-d']
+	else:
+		printHelp()
+	filesDataSFrame=readFiles(transcripts)
+	print (filesDataSFrame.num_rows())
+	if(not (filesDataSFrame.num_rows())):
+		print "Error in reading transcripts."
+		printHelp()
+	filesDataSFrame = computerTfIdf(filesDataSFrame, "Text")
+	query = ""
+	while not (query == "quit" or query == "q"):
+		query = raw_input('Enter query: ')
+	sys.exit(0)
 
 # In[6]:
 
