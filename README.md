@@ -10,6 +10,14 @@ Interactive information retrieval can solve this problem.
 
 This program lets user to train over a fixed dataset, and then run queries to find best study material that discusses the topic in query. 
 
+
+
+## Dataset
+The repository contains a small dataset for course text (subtitles) from a Coursera case. The dataset can be found in "transcripts" folder. Idea here that each text file here represents a study material, and we want to search the best on for the query. 
+
+User can create their own dataset by compiling all text files into a single folder.
+
+
 ## Usage 
 
 ### Initial Set-up
@@ -34,13 +42,7 @@ so on...
 
 At any time, write query as **"q"** or **"quit"** to exit the program.
 
-## OUTOUT
+### Output
 If the results for the query is/are found, program will print the path for ranked documents in XML format. Purpose of selecting XML format is that it can be easily parsed and modified when using this program as a service within another program, for example a chat-bot.
 
-
-
-### Dataset
-The repository contains a small dataset for course text (subtitles) from a Coursera case. The dataset can be found in "transcripts" folder. Idea here that each text file here represents a study material, and we want to search the best on for the query. 
-
-User can create their own dataset by compiling all text files into a single folder.
-
+## Implementation
