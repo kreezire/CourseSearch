@@ -25,9 +25,15 @@ Usage: **python search.py -d [folderPath]**
 To test with sample data-set, run: **python search.py -d transcripts**
 
 It will then prompt and ask user to enter search query. Result of query is totally context dependent. For the sample data-set in this repository, documents are related to machine learning. Following queries will result valid result:
+
 1) What is regression
-2) Explain clustering
+
+2) Explain clustering 
+
 so on...
+
+At anytime, write query as **"q"** or **quit"" to exit the program.
+
 
 
 
