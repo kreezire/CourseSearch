@@ -17,6 +17,19 @@ Before running the script, you need to install following dependencies:
 1. [NLTK](http://www.nltk.org/install.html)
 2. [GraphLab](https://turi.com/download/install-graphlab-create.html)
 
+### Running
+Usage: python search.py -d [folderPath]
+[folderPath] is the path containing training documents (txt files).
+
+To test with sample data-set, run: python search.py -d transcripts
+
+It will then prompt and ask user to enter search query. Result of query is totally context dependent. For the sample data-set in this repository, documents are related to machine learning. Following queries will result valid result:
+1) What is regression
+2) Explain clustering
+so on...
+
+
+
 ### Dataset
 The repository contains a small dataset for course text (subtitles) from a Coursera case. The dataset can be found in "transcripts" folder. Idea here that each text file here represents a study material, and we want to search the best on for the query. 
 
