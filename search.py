@@ -20,6 +20,8 @@ def readCommandLineArgs(argv):
 	while argv:  # While there are arguments left to parse...
 		if argv[0][0] == '-':  # Found a "-name value" pair.
 			hasArgs = True
+			if len(argv) <=1:
+				break
 			opts[argv[0]] = argv[1]  # Add key and value to the dictionary.
 		argv = argv[1:]  # Reduce the argument list by copying it starting from index 1.
 	if hasArgs == False:
@@ -65,13 +67,14 @@ stop_words = set(nltk.corpus.stopwords.words('english'))
 ### Main task
 if __name__ == '__main__':
 	from sys import argv
-	print "\n\n training ..."
 	transcripts = ""
 	#print "dubug1"
 	myargs = readCommandLineArgs(argv)
 	if myargs == -1:
 		printHelp()
+	
 	if '-d' in myargs:  
+		print "\n\n training ..."
 		transcripts = myargs['-d']
 	else:
 		printHelp()
