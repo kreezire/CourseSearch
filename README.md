@@ -32,8 +32,10 @@ It will then prompt and ask user to enter search query. Result of query is total
 
 so on...
 
-At anytime, write query as **"q"** or **quit"" to exit the program.
+At any time, write query as **"q"** or **"quit"** to exit the program.
 
+## OUTOUT
+If the results for the query is/are found, program will print the path for ranked documents in XML format. Purpose of selecting XML format is that it can be easily parsed and modified when using this program as a service within another program, for example a chat-bot.
 
 
 
