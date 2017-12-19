@@ -14,6 +14,7 @@ import sys
 #returns -1 if it fails
 
 def readCommandLineArgs(argv):
+	#print len(argv)
 	opts = {}  # Empty dictionary to store key-value pairs.
 	hasArgs = False
 	while argv:  # While there are arguments left to parse...
@@ -59,11 +60,14 @@ def computerTfIdf(filesDataSFrame, textField):
 
 
 # In[5]:
+stop_words = set(nltk.corpus.stopwords.words('english'))
 
 ### Main task
 if __name__ == '__main__':
 	from sys import argv
+	print "\n\n training ..."
 	transcripts = ""
+	#print "dubug1"
 	myargs = readCommandLineArgs(argv)
 	if myargs == -1:
 		printHelp()
@@ -77,9 +81,40 @@ if __name__ == '__main__':
 		print "Error in reading transcripts."
 		printHelp()
 	filesDataSFrame = computerTfIdf(filesDataSFrame, "Text")
+	print "\n\n"
 	query = ""
-	while not (query == "quit" or query == "q"):
+	while True:
 		query = raw_input('Enter query: ')
+		if (query == "quit" or query == "q"):
+			sys.exit(0)
+		query_strip = query.strip()
+		query_tokens = nltk.tokenize.word_tokenize(query_strip)
+		query_FilteredSet= [w for w in query_tokens if not w in stop_words]
+		result = False
+		printString = ""
+		if len(query_FilteredSet)>0:
+			ranking = graphlab.text_analytics.bm25(filesDataSFrame["word_count"], query_FilteredSet)
+			if ranking.num_rows()>0:
+				if ranking[0]["bm25"]>0.5:
+					result = True
+					printString = "\n<query>"+query+"</query>"
+					count = 1;
+					printString = printString+"\n<result>"
+					for id in ranking["doc_id"]:
+						printString += "\n<"+str(count)+"> "
+						printString += transcripts+"\\"+filesDataSFrame[id]["File"]
+						printString += " </"+str(count)+">"
+						count = count + 1
+					printString = printString+"\n</result>"
+						
+		
+		if not result:
+			print "\nCould not retrieve study material for this query. Please try another query."
+		else:
+			print printString
+		#print query_FilteredSet
+		
+		
 	sys.exit(0)
 
 # In[6]:
