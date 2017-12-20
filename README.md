@@ -46,3 +46,14 @@ At any time, write query as **"q"** or **"quit"** to exit the program.
 If the results for the query is/are found, program will print the path for ranked documents in XML format. Purpose of selecting XML format is that it can be easily parsed and modified when using this program as a service within another program, for example a chat-bot.
 
 ## Implementation
+
+### Training and Building Context
+
+The program trains of text files present in the folder provided in the command line. It considers each document as a candidate. For each document, program computes word count, TF-IDF measure, removes stop words so on. 
+
+### Parsing query
+Query is parsed by removing stop words and generating set of words in the query.
+
+### Scoring
+
+Scoring is done by computing BM25 for the query with each document. The matched documents are returned in  order or ranking. 
