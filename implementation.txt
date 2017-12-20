@@ -1,0 +1,12 @@
+## Implementation
+
+### Training and Building Context
+
+The program trains on text files present in the folder provided in the command line. It considers each document as a candidate. For each document, program computes word count, TF-IDF measure, removes stop words so on. 
+
+### Parsing query
+Query is parsed by removing stop words and generating set of words in the query.
+
+### Scoring
+
+Scoring is done by computing BM25 for the query with each document. The matched documents are returned in  order or ranking. 
